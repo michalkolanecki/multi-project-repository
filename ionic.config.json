@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "fingovo-app": {
+      "name": "Fingovo",
+      "type": "angular-standalone",
+      "root": "./",
+      "integrations": {
+        "capacitor": {}
+      }
+    }
+  },
+  "defaultProject": "fingovo-app"
+}

@@ -40,3 +40,12 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# capacitor build
+www
+
+# ionic android
+android
+
+# ionic ios
+ios
