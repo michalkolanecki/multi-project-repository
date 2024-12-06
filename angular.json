@@ -118,13 +118,15 @@
             "tsConfig": "projects/fingovo-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/fingovo-app/public"
-              }
+              "projects/fingovo-app/src/favicon.ico",
+              "projects/fingovo-app/src/assets",
+              "projects/fingovo-app/src/manifest.webmanifest"
             ],
             "styles": ["projects/fingovo-app/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "buildOptimizer": true,
+            "serviceWorker": true,
+            "ngswConfigPath": "projects/fingovo-app/ngsw-config.json"
           },
           "configurations": {
             "production": {
