@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SwUpdate } from '@angular/service-worker';
+import { SwUpdate, VersionEvent } from '@angular/service-worker';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +13,20 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent {
   readonly #swUpdate: SwUpdate = inject(SwUpdate);
 
-  ngOnInit() {
-    //
-    // TEMPORARY, SHOULD BE FIXED, ITS RELOAD PERMANENTLY
-    //
-    // if (this.#swUpdate.isEnabled) {
-    //   this.#swUpdate.versionUpdates.subscribe(() => {
-    //     if (confirm('New version available. Load New Version?')) {
-    //       window.location.reload();
-    //     }
-    //   });
-    // }
+  constructor() {
+    if (this.#swUpdate.isEnabled) {
+      this.#swUpdate.versionUpdates
+        .pipe(filter((event: VersionEvent) => event.type === 'VERSION_READY'))
+        .subscribe(() => {
+          if (
+            confirm(`
+              Update available\n
+              New version of application is available, please note that if you select Refresh Now, you will lose your current progress. If you choose Cancel, some modules might not load.
+            `)
+          ) {
+            window.location.reload();
+          }
+        });
+    }
   }
 }
