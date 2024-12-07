@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { DataClientApiService } from './data-client-api.service';
+import { DataClientApiService } from "./data-client-api.service";
 
-describe('DataClientApiService', () => {
-  let service: DataClientApiService;
+describe("DataClientApiService", () => {
+    let service: DataClientApiService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(DataClientApiService);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(DataClientApiService);
+    });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
 });

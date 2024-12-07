@@ -1,16 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'lib-common',
-  standalone: true,
-  imports: [],
-  template: `
-    <p>
-      common works!
-    </p>
-  `,
-  styles: ``
+    selector: "lib-common",
+    standalone: true,
+    imports: [],
+    template: ` <p>common works!</p> `,
+    styles: ``,
 })
-export class CommonComponent {
-
-}
+export class CommonComponent {}

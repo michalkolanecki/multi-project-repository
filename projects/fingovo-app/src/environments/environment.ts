@@ -1,11 +1,11 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-import { FingovoEnv } from './environment.model';
+import { FingovoEnv } from "./environment.model";
 
 export const environment: FingovoEnv = {
-  production: false,
-  apiUrl: 'http://localhost:3000/api',
+    production: false,
+    apiUrl: "http://localhost:3000/api",
 };
 
 /*

@@ -1,11 +1,11 @@
 {
-  "projects": {
-    "fingovo-app": {
-      "name": "Fingovo",
-      "type": "angular-standalone",
-      "integrations": {
-        "capacitor": {}
-      }
+    "projects": {
+        "fingovo-app": {
+            "name": "Fingovo",
+            "type": "angular-standalone",
+            "integrations": {
+                "capacitor": {}
+            }
+        }
     }
-  }
 }

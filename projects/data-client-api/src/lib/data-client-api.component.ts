@@ -1,16 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'lib-data-client-api',
-  standalone: true,
-  imports: [],
-  template: `
-    <p>
-      data-client-api works!
-    </p>
-  `,
-  styles: ``
+    selector: "lib-data-client-api",
+    standalone: true,
+    imports: [],
+    template: ` <p>data-client-api works!</p> `,
+    styles: ``,
 })
-export class DataClientApiComponent {
-
-}
+export class DataClientApiComponent {}
