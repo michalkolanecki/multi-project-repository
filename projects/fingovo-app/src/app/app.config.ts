@@ -10,6 +10,8 @@ import { provideIonicAngular, IonicRouteStrategy } from "@ionic/angular/standalo
 import { routes } from "./app.routes";
 import { provideHttpClient } from "@angular/common/http";
 import { provideServiceWorker } from "@angular/service-worker";
+import { environment } from "../environments/environment";
+import { provideStore } from "@ngrx/store";
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -24,5 +26,7 @@ export const appConfig: ApplicationConfig = {
             // or after 30 seconds (whichever comes first).
             registrationStrategy: "registerWhenStable:30000",
         }),
+        provideStore(),
+        environment.providers,
     ],
 };
