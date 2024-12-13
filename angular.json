@@ -168,6 +168,36 @@
                     }
                 }
             }
+        },
+        "fingovo-api": {
+            "projectType": "library",
+            "root": "projects/data-client-api/fingovo-api",
+            "sourceRoot": "projects/data-client-api/fingovo-api/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
+                    "options": {
+                        "project": "projects/data-client-api/fingovo-api/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/data-client-api/fingovo-api/tsconfig.lib.prod.json"
+                        },
+                        "development": {
+                            "tsConfig": "projects/data-client-api/fingovo-api/tsconfig.lib.json"
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "tsConfig": "projects/data-client-api/fingovo-api/tsconfig.spec.json",
+                        "polyfills": ["zone.js", "zone.js/testing"]
+                    }
+                }
+            }
         }
     },
     "cli": {
