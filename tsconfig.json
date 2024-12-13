@@ -6,7 +6,6 @@
         "baseUrl": "./",
         "paths": {
             "common": ["./dist/common"],
-            "data-client-api": ["./dist/data-client-api"],
             "ui-shared-components": ["./dist/ui-shared-components"]
         },
         "outDir": "./dist/out-tsc",
