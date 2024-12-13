@@ -7,7 +7,7 @@
         "paths": {
             "common": ["projects/common/src/public-api.ts"],
             "fingovo-api": ["projects/data-client-api/fingovo-api/src/public-api.ts"],
-            "ui-shared-components": ["projects/ui-shared-components/src/public-api.ts"]
+            "ui-shared-elements": ["projects/ui-shared-elements/src/public-api.ts"]
         },
         "outDir": "./dist/out-tsc",
         "forceConsistentCasingInFileNames": true,
