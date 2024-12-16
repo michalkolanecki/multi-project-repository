@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "./functions/helpers.scss" as helpers;
+
+// THEMENINGS
+@use "./theming/breakpoints.scss";
+@use "./theming/buttons.scss";
+@use "./theming/inputs.scss";
+@use "./theming/typography.scss" as typography;
+@use "./theming/utils.scss" as utils;
+
+// INCLUDES
+@include utils.addSpacingVarsToRoot();
+@include typography.addTypographyToRoot();
+
+// OVERRIDES
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
