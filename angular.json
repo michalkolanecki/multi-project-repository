@@ -54,7 +54,7 @@
                         "outputPath": "dist/fingovo-app",
                         "index": "projects/fingovo-app/src/index.html",
                         "main": "projects/fingovo-app/src/main.ts",
-                        "polyfills": ["projects/fingovo-app/src/polyfills.ts"],
+                        "polyfills": ["zone.js"],
                         "tsConfig": "projects/fingovo-app/tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
@@ -118,7 +118,7 @@
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "main": "projects/fingovo-app/src/test.ts",
-                        "polyfills": "projects/fingovo-app/src/polyfills.ts",
+                        "polyfills": ["zone.js"],
                         "tsConfig": "projects/fingovo-app/tsconfig.spec.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
