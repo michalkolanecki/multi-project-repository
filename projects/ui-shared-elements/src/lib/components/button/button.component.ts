@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'lib-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
-  standalone: true,
+    selector: "ui-shared-lib-button",
+    templateUrl: "./button.component.html",
+    styleUrls: ["./button.component.scss"],
+    standalone: true,
 })
-export class ButtonComponent  implements OnInit {
+export class ButtonComponent implements OnInit {
+    constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {}
-
+    ngOnInit() {}
 }

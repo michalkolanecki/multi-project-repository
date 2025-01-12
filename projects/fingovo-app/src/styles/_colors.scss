@@ -10,90 +10,26 @@ $info-color: #17a2b8;
 
 // Background Color
 $background-color: #ffffff;
-$footer-background: #f9fff6;
+$footer-background: #f6e1a1;
 
 // Text Palette Color
-$text-color-100: #a4a4a4;
-$text-color-200: #8d8d8d;
-$text-color-300: #767676;
-$text-color-400: #5f5f5f;
-$text-color-500: #494949;
-$text-color-600: #323232;
-$text-color-700: #1b1b1b;
+$primary-text-color: #1b1b1b;
 
 // Blue Palette Color
-// Blue Light
-$blue-color-light-100: #66b2ff;
-$blue-color-light-200: #5ca0e6;
-$blue-color-light-300: #528ecc;
-$blue-color-light-400: #477db3;
-$blue-color-light-500: #3d6b99;
-// Blue Medium
-$blue-color-medium-100: #007bff;
-$blue-color-medium-200: #006fe6;
-$blue-color-medium-300: #0062cc;
-$blue-color-medium-400: #0056b3;
-$blue-color-medium-500: #004a99;
-// Blue Dark
-$blue-color-dark-100: #0056cc;
-$blue-color-dark-200: #004db8;
-$blue-color-dark-300: #0045a3;
-$blue-color-dark-400: #003c8f;
-$blue-color-dark-500: #00347a;
-// Blue Darker
-$blue-color-darker-100: #002c77;
-$blue-color-darker-200: #00286b;
-$blue-color-darker-300: #00235f;
-$blue-color-darker-400: #001f53;
-$blue-color-darker-500: #001a47;
+$blue-color-light: #d8f1ff;
+$blue-color-medium: #0056cc;
+$blue-color-dark: #002c77;
 
 // Green Palette Color
-// Green Light
-$green-color-light-100: #70d86b;
-$green-color-light-200: #65c260;
-$green-color-light-300: #5aad56;
-$green-color-light-400: #4e974b;
-$green-color-light-500: #438240;
-// Green Medium
-$green-color-medium-100: #2ba745;
-$green-color-medium-200: #27963e;
-$green-color-medium-300: #228637;
-$green-color-medium-400: #1e7530;
-$green-color-medium-500: #1a6429;
-// Green Dark
-$green-color-dark-100: #1f7e32;
-$green-color-dark-200: #1c712d;
-$green-color-dark-300: #196528;
-$green-color-dark-400: #165823;
-$green-color-dark-500: #134c1e;
-// Green Darker
-$green-color-darker-100: #186327;
-$green-color-darker-200: #165923;
-$green-color-darker-300: #134f1f;
-$green-color-darker-400: #11451b;
-$green-color-darker-500: #0e3b17;
+$green-color-light: #e9f5ee;
+$green-color-medium: #c8e6c9;
+$green-color-dark: #2e7d32;
+$green-color-darker: #186327;
 
 // Yellow Palette Color
-// Yellow Light
-$yellow-color-light-100: #fbc640;
-$yellow-color-light-200: #e2b23a;
-$yellow-color-light-300: #c99e33;
-$yellow-color-light-400: #b08b2d;
-$yellow-color-light-500: #977726;
-
-// Yellow Medium
-$yellow-color-medium-100: #fbc02d;
-$yellow-color-medium-200: #e2ad29;
-$yellow-color-medium-300: #c99a24;
-$yellow-color-medium-400: #b0861f;
-$yellow-color-medium-500: #97731b;
-
-// Yellow Dark
-$yellow-color-dark-100: #f0ad05;
-$yellow-color-dark-200: #d89c05;
-$yellow-color-dark-300: #c08a04;
-$yellow-color-dark-400: #a87904;
-$yellow-color-dark-500: #906803;
+$yellow-color-light: #f6e1a1;
+$yellow-color-medium: #fbc02d;
+$yellow-color-dark: #f0ad05;
 
 // MIXINS
 
@@ -114,81 +50,22 @@ $yellow-color-dark-500: #906803;
         --footer-color: #{$footer-background};
 
         // Text Color
-        --text-color-100: #{$text-color-100};
-        --text-color-200: #{$text-color-200};
-        --text-color-300: #{$text-color-300};
-        --text-color-400: #{$text-color-400};
-        --text-color-500: #{$text-color-500};
-        --text-color-600: #{$text-color-600};
-        --text-color-700: #{$text-color-700};
+        --primary-text-color: #{$primary-text-color};
 
         // Blue Palette Color
-        --blue-color-light-100: #{$blue-color-light-100};
-        --blue-color-light-200: #{$blue-color-light-200};
-        --blue-color-light-300: #{$blue-color-light-300};
-        --blue-color-light-400: #{$blue-color-light-400};
-        --blue-color-light-500: #{$blue-color-light-500};
-
-        --blue-color-medium-100: #{$blue-color-medium-100};
-        --blue-color-medium-200: #{$blue-color-medium-200};
-        --blue-color-medium-300: #{$blue-color-medium-300};
-        --blue-color-medium-400: #{$blue-color-medium-400};
-        --blue-color-medium-500: #{$blue-color-medium-500};
-
-        --blue-color-dark-100: #{$blue-color-dark-100};
-        --blue-color-dark-200: #{$blue-color-dark-200};
-        --blue-color-dark-300: #{$blue-color-dark-300};
-        --blue-color-dark-400: #{$blue-color-dark-400};
-        --blue-color-dark-500: #{$blue-color-dark-500};
-
-        --blue-color-darker-100: #{$blue-color-darker-100};
-        --blue-color-darker-200: #{$blue-color-darker-200};
-        --blue-color-darker-300: #{$blue-color-darker-300};
-        --blue-color-darker-400: #{$blue-color-darker-400};
-        --blue-color-darker-500: #{$blue-color-darker-500};
+        --blue-color-light: #{$blue-color-light};
+        --blue-color-medium: #{$blue-color-medium};
+        --blue-color-dark: #{$blue-color-dark};
 
         // Green Palette Color
-        --green-color-light-100: #{$green-color-light-100};
-        --green-color-light-200: #{$green-color-light-200};
-        --green-color-light-300: #{$green-color-light-300};
-        --green-color-light-400: #{$green-color-light-400};
-        --green-color-light-500: #{$green-color-light-500};
-
-        --green-color-medium-100: #{$green-color-medium-100};
-        --green-color-medium-200: #{$green-color-medium-200};
-        --green-color-medium-300: #{$green-color-medium-300};
-        --green-color-medium-400: #{$green-color-medium-400};
-        --green-color-medium-500: #{$green-color-medium-500};
-
-        --green-color-dark-100: #{$green-color-dark-100};
-        --green-color-dark-200: #{$green-color-dark-200};
-        --green-color-dark-300: #{$green-color-dark-300};
-        --green-color-dark-400: #{$green-color-dark-400};
-        --green-color-dark-500: #{$green-color-dark-500};
-
-        --green-color-darker-100: #{$green-color-darker-100};
-        --green-color-darker-200: #{$green-color-darker-200};
-        --green-color-darker-300: #{$green-color-darker-300};
-        --green-color-darker-400: #{$green-color-darker-400};
-        --green-color-darker-500: #{$green-color-darker-500};
+        --green-color-light: #{$green-color-light};
+        --green-color-medium: #{$green-color-medium};
+        --green-color-dark: #{$green-color-dark};
+        --green-color-darker: #{$green-color-darker};
 
         // Yellow Palette Color
-        --yellow-color-light-100: #{$yellow-color-light-100};
-        --yellow-color-light-200: #{$yellow-color-light-200};
-        --yellow-color-light-300: #{$yellow-color-light-300};
-        --yellow-color-light-400: #{$yellow-color-light-400};
-        --yellow-color-light-500: #{$yellow-color-light-500};
-
-        --yellow-color-medium-100: #{$yellow-color-medium-100};
-        --yellow-color-medium-200: #{$yellow-color-medium-200};
-        --yellow-color-medium-300: #{$yellow-color-medium-300};
-        --yellow-color-medium-400: #{$yellow-color-medium-400};
-        --yellow-color-medium-500: #{$yellow-color-medium-500};
-
-        --yellow-color-dark-100: #{$yellow-color-dark-100};
-        --yellow-color-dark-200: #{$yellow-color-dark-200};
-        --yellow-color-dark-300: #{$yellow-color-dark-300};
-        --yellow-color-dark-400: #{$yellow-color-dark-400};
-        --yellow-color-dark-500: #{$yellow-color-dark-500};
+        --yellow-color-light: #{$yellow-color-light};
+        --yellow-color-medium: #{$yellow-color-medium};
+        --yellow-color-dark: #{$yellow-color-dark};
     }
 }

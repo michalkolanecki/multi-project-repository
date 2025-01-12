@@ -1,13 +1,13 @@
 <div
   [attr.aria-label]="ariaLabel()"
-  class="icon-wrapper"
+  [routerLink]="redirectTo()"
+  class="logo-wrapper"
   role="img">
   <img
     [ngSrc]="src()"
     [alt]="alt()"
-    [width]="size()"
-    [height]="size()"
-    [style.cursor]="cursor()"
+    [width]="width()"
+    [height]="height()"
     priority
   />
 </div>
