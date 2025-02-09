@@ -1,0 +1,11 @@
+<ion-list [class]="listCustomClass()"
+>
+  @for (item of items(); track item.id) {
+    <ui-lib-item [item]="item" (click)="onClickedItem(item)"></ui-lib-item>
+
+    @if (!item.isRoot && item.children) {
+      <ui-lib-list-item [items]="item.children" [listCustomClass]="item.listCustomClass"></ui-lib-list-item>
+    }
+  }
+
+</ion-list>

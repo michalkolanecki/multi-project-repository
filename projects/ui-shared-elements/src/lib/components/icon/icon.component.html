@@ -1,13 +1,7 @@
-<div
-  [attr.aria-label]="ariaLabel()"
-  class="icon-wrapper"
-  role="img">
-  <img
-    [ngSrc]="src()"
-    [alt]="alt()"
-    [width]="size()"
-    [height]="size()"
-    [style.cursor]="cursor()"
-    priority
-  />
-</div>
+<ion-icon
+  [classList]="iconDetails()?.iconCustomClass"
+  [name]="iconDetails()?.iconVariant"
+  [src]="iconDetails()?.iconSrc"
+  [attr.aria-label]="iconDetails()?.iconAriaLabel"
+  [attr.aria-hidden]="iconDetails()?.iconAriaHidden">
+</ion-icon>

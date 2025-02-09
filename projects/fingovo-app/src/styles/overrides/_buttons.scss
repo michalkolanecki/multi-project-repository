@@ -1,0 +1,8 @@
+ion-button.searchbar {
+  &__btn {
+    height: var(--space-3);
+    --background: var(--green-color-dark);
+    --background-hover: var(--green-color-medium);
+    --border-color: var(--black-color);
+  }
+}

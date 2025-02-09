@@ -1,0 +1,4 @@
+ion-menu::part(container) {
+  --max-width: var(--sidebar-menu-width);
+  --width: 100%;
+}

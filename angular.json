@@ -190,7 +190,7 @@
       "projectType": "library",
       "root": "projects/ui-shared-elements",
       "sourceRoot": "projects/ui-shared-elements/src",
-      "prefix": "ui-shared-lib",
+      "prefix": "ui-lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

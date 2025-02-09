@@ -1,0 +1,28 @@
+@use "projects/global-styles/theme.scss" as globals;
+
+ion-modal.searchbar {
+  &__modal {
+    --height: auto;
+
+    &::part(content) {
+      width: 100%;
+      position: absolute;
+
+      @include globals.responsive-view(
+          'mobile',
+          'tablet',
+      ) {
+        top: var(--header-mobile-height);
+      }
+
+      @include globals.responsive-view(
+          'laptop',
+          'desktop',
+          'large-desktop',
+          'extra-large-desktop'
+      ) {
+        top: var(--header-desktop-height);
+      }
+    }
+  }
+}

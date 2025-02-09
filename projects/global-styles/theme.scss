@@ -1,39 +1,72 @@
 @use "sass:map";
 @use "./functions/helpers.scss" as helpers;
 
-// THEMENINGS
-@use "./theming/breakpoints.scss";
-@use "./theming/buttons.scss";
-@use "./theming/inputs.scss";
+// THEMS
+@use "theming/devices-breakpoints" as devices-breakpoints;
 @use "./theming/typography.scss" as typography;
 @use "./theming/utils.scss" as utils;
+@use "./theming/inputs.scss";
+@use "node_modules/@progress/kendo-theme-default/scss/all.scss";
 
 // INCLUDES
 @include utils.addSpacingVarsToRoot();
 @include typography.addTypographyToRoot();
+@include devices-breakpoints.addDevicesBreakpointsToRoot();
 
 // OVERRIDES
+
+// MIXINS
+
+@mixin responsive-view($devices...) {
+  @each $device in $devices {
+    @if $device == devices-breakpoints.$mobile-device {
+      @media screen and (max-width: #{devices-breakpoints.$breakpoint-tablet - 1px}) {
+        @content;
+      }
+    } @else if $device == devices-breakpoints.$tablet-device {
+      @media screen and (min-width: #{devices-breakpoints.$breakpoint-tablet}) and (max-width: #{devices-breakpoints.$breakpoint-laptop - 1px}) {
+        @content;
+      }
+    } @else if $device == devices-breakpoints.$laptop-device {
+      @media screen and (min-width: #{devices-breakpoints.$breakpoint-laptop}) and (max-width: #{devices-breakpoints.$breakpoint-desktop - 1px}) {
+        @content;
+      }
+    } @else if $device == devices-breakpoints.$desktop-device {
+      @media screen and (min-width: #{devices-breakpoints.$breakpoint-desktop}) and (max-width: #{devices-breakpoints.$breakpoint-large-desktop - 1px}) {
+        @content;
+      }
+    } @else if $device == devices-breakpoints.$large-desktop-device {
+      @media screen and (min-width: #{devices-breakpoints.$breakpoint-large-desktop}) and (max-width: #{devices-breakpoints.$breakpoint-extra-large-desktop - 1px}) {
+        @content;
+      }
+    } @else if $device == devices-breakpoints.$extra-large-desktop-device {
+      @media screen and (min-width: #{devices-breakpoints.$breakpoint-extra-large-desktop}) {
+        @content;
+      }
+    }
+  }
+}
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }

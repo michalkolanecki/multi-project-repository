@@ -1,0 +1,30 @@
+ion-header.sidebar-menu {
+  &__header {
+    box-shadow: none;
+  }
+}
+
+ion-toolbar.sidebar-menu {
+  &__toolbar {
+    display: flex;
+    flex-direction: row;
+    padding: var(--space-1) 0 var(--space-1) var(--space-0-5);
+  }
+}
+
+ion-title.sidebar-menu {
+  &__title {
+    padding-left: var(--space-0-5);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+  }
+}
+
+.sidebar-menu {
+  &__title-wrapper {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

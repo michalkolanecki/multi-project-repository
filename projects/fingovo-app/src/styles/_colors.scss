@@ -23,49 +23,55 @@ $blue-color-dark: #002c77;
 // Green Palette Color
 $green-color-light: #e9f5ee;
 $green-color-medium: #c8e6c9;
-$green-color-dark: #2e7d32;
-$green-color-darker: #186327;
+$green-color-dark: #225926;
+$green-color-darker: #145220;
 
 // Yellow Palette Color
 $yellow-color-light: #f6e1a1;
 $yellow-color-medium: #fbc02d;
 $yellow-color-dark: #f0ad05;
 
+// UTILS
+$input-default-border-color: #929292;
+
 // MIXINS
 
 @mixin injectCSSColorVarsToRoot() {
-    :root {
-        // White/Black Palette
-        --white-color: #{$white};
-        --black-color: #{$black};
+  :root {
+    // White/Black Palette
+    --white-color: #{$white};
+    --black-color: #{$black};
 
-        // Action/Accent Color
-        --success-color: #{$success-color};
-        --warning-color: #{$warning-color};
-        --danger-color: #{$danger-color};
-        --info-color: #{$info-color};
+    // Action/Accent Color
+    --success-color: #{$success-color};
+    --warning-color: #{$warning-color};
+    --danger-color: #{$danger-color};
+    --info-color: #{$info-color};
 
-        // Background Color
-        --background-color: #{$background-color};
-        --footer-color: #{$footer-background};
+    // Background Color
+    --background-color: #{$background-color};
+    --footer-color: #{$footer-background};
 
-        // Text Color
-        --primary-text-color: #{$primary-text-color};
+    // Text Color
+    --primary-text-color: #{$primary-text-color};
 
-        // Blue Palette Color
-        --blue-color-light: #{$blue-color-light};
-        --blue-color-medium: #{$blue-color-medium};
-        --blue-color-dark: #{$blue-color-dark};
+    // Blue Palette Color
+    --blue-color-light: #{$blue-color-light};
+    --blue-color-medium: #{$blue-color-medium};
+    --blue-color-dark: #{$blue-color-dark};
 
-        // Green Palette Color
-        --green-color-light: #{$green-color-light};
-        --green-color-medium: #{$green-color-medium};
-        --green-color-dark: #{$green-color-dark};
-        --green-color-darker: #{$green-color-darker};
+    // Green Palette Color
+    --green-color-light: #{$green-color-light};
+    --green-color-medium: #{$green-color-medium};
+    --green-color-dark: #{$green-color-dark};
+    --green-color-darker: #{$green-color-darker};
 
-        // Yellow Palette Color
-        --yellow-color-light: #{$yellow-color-light};
-        --yellow-color-medium: #{$yellow-color-medium};
-        --yellow-color-dark: #{$yellow-color-dark};
-    }
+    // Yellow Palette Color
+    --yellow-color-light: #{$yellow-color-light};
+    --yellow-color-medium: #{$yellow-color-medium};
+    --yellow-color-dark: #{$yellow-color-dark};
+
+    // UTILS
+    --input-default-border-color: #{$input-default-border-color};
+  }
 }

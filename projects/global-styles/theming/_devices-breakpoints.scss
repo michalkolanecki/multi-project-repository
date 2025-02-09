@@ -1,0 +1,24 @@
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 992px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large-desktop: 1400px;
+$breakpoint-extra-large-desktop: 1600px;
+
+$mobile-device: 'mobile';
+$tablet-device: 'tablet';
+$laptop-device: 'laptop';
+$desktop-device: 'desktop';
+$large-desktop-device: 'large-desktop';
+$extra-large-desktop-device: 'extra-large-desktop';
+
+@mixin addDevicesBreakpointsToRoot() {
+  :root {
+    --breakpoint-mobile: #{$breakpoint-mobile};
+    --breakpoint-tablet: #{$breakpoint-tablet};
+    --breakpoint-laptop: #{$breakpoint-laptop};
+    --breakpoint-desktop: #{$breakpoint-desktop};
+    --breakpoint-large-desktop: #{$breakpoint-large-desktop};
+    --breakpoint-extra-large-desktop: #{$breakpoint-extra-large-desktop};
+  }
+}

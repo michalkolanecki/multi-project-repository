@@ -2,6 +2,8 @@ import { Component, inject } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { SwUpdate, VersionEvent } from "@angular/service-worker";
 import { filter } from "rxjs";
+import { addIcons } from "ionicons";
+import { ionicIcons } from "./shared/constans/ionic-icons";
 
 @Component({
     selector: "app-root",
@@ -14,6 +16,8 @@ export class AppComponent {
     readonly #swUpdate: SwUpdate = inject(SwUpdate);
 
     constructor() {
+        addIcons({ ...ionicIcons });
+
         if (this.#swUpdate.isEnabled) {
             this.#swUpdate.versionUpdates
                 .pipe(filter((event: VersionEvent) => event.type === "VERSION_READY"))

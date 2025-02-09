@@ -1,7 +1,5 @@
 // Spacing
-
 $space-1px: 1px;
-
 $space-0-125: 0.125rem;
 $space-0-25: 0.25rem;
 $space-0-5: 0.5rem;
@@ -25,30 +23,54 @@ $space-9: 9rem;
 $space-9-5: 9.5rem;
 $space-10: 10rem;
 
+// HEADERS HEIGHT
+$header-mobile-height: 4rem;
+$header-desktop-height: 5rem;
+
+// LOGO DIMENSIONS
+$logo-mobile-width: 7rem;
+$logo-mobile-height: 2.5rem;
+$logo-desktop-width: 12.5rem;
+$logo-desktop-height: 3.375rem;
+
+// SIDEBAR MENU
+$sidebar-menu-width: 25rem;
+
+
 @mixin addSpacingVarsToRoot() {
-    :root {
-        --space-1px: #{$space-1px};
-        --space-0-125: #{$space-0-125};
-        --space-0-25: #{$space-0-25};
-        --space-0-5: #{$space-0-5};
-        --space-1: #{$space-1};
-        --space-1-5: #{$space-1-5};
-        --space-2: #{$space-2};
-        --space-2-5: #{$space-2-5};
-        --space-3: #{$space-3};
-        --space-3-5: #{$space-3-5};
-        --space-4: #{$space-4};
-        --space-4-5: #{$space-4-5};
-        --space-5: #{$space-5};
-        --space-5-5: #{$space-5-5};
-        --space-6: #{$space-6};
-        --space-6-5: #{$space-6-5};
-        --space-7: #{$space-7};
-        --space-7-5: #{$space-7-5};
-        --space-8: #{$space-8};
-        --space-8-5: #{$space-8-5};
-        --space-9: #{$space-9};
-        --space-9-5: #{$space-9-5};
-        --space-10: #{$space-10};
-    }
+  :root {
+    --space-1px: #{$space-1px};
+    --space-0-125: #{$space-0-125};
+    --space-0-25: #{$space-0-25};
+    --space-0-5: #{$space-0-5};
+    --space-1: #{$space-1};
+    --space-1-5: #{$space-1-5};
+    --space-2: #{$space-2};
+    --space-2-5: #{$space-2-5};
+    --space-3: #{$space-3};
+    --space-3-5: #{$space-3-5};
+    --space-4: #{$space-4};
+    --space-4-5: #{$space-4-5};
+    --space-5: #{$space-5};
+    --space-5-5: #{$space-5-5};
+    --space-6: #{$space-6};
+    --space-6-5: #{$space-6-5};
+    --space-7: #{$space-7};
+    --space-7-5: #{$space-7-5};
+    --space-8: #{$space-8};
+    --space-8-5: #{$space-8-5};
+    --space-9: #{$space-9};
+    --space-9-5: #{$space-9-5};
+    --space-10: #{$space-10};
+
+    --header-mobile-height: #{$header-mobile-height};
+    --header-desktop-height: #{$header-desktop-height};
+
+    --logo-mobile-width: #{$logo-mobile-width};
+    --logo-mobile-height: #{$logo-mobile-height};
+    --logo-desktop-width: #{$logo-desktop-width};
+    --logo-desktop-height: #{$logo-desktop-height};
+
+    --sidebar-menu-width: #{$sidebar-menu-width};
+  }
 }

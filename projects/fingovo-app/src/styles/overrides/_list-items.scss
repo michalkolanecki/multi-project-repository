@@ -1,0 +1,23 @@
+/* SIDEBAR MENU */
+
+ion-list {
+  &.base-level-sidebar-list, .second-level-sidebar-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.second-level-sidebar-list {
+    margin-left: var(--space-1);
+  }
+}
+
+/* DESKTOP MENU */
+
+ion-list {
+  &.base-level-desktop-list {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5;
+    position: relative;
+  }
+}
