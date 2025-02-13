@@ -1,4 +1,9 @@
-import { ApplicationConfig, provideZoneChangeDetection, isDevMode } from "@angular/core";
+import {
+    ApplicationConfig,
+    provideZoneChangeDetection,
+    isDevMode,
+    importProvidersFrom,
+} from "@angular/core";
 import {
     PreloadAllModules,
     provideRouter,
@@ -12,6 +17,7 @@ import { provideHttpClient } from "@angular/common/http";
 import { provideServiceWorker } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import { provideStore } from "@ngrx/store";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -28,5 +34,6 @@ export const appConfig: ApplicationConfig = {
         }),
         provideStore(),
         environment.providers,
+        importProvidersFrom([BrowserAnimationsModule]),
     ],
 };

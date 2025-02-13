@@ -1,0 +1,30 @@
+<ui-lib-list-item [listCustomClass]="'base-level-desktop-list'" [items]="currentMainMenuItems()"
+                  (clickedItem)="onMenuOpenItem($event)" id="bottom-start"></ui-lib-list-item>
+
+<ion-popover class="popover-desktop-wrapper"
+             trigger="bottom-start"
+             side="bottom"
+             alignment="start"
+             [isOpen]="isOpen()"
+             (didDismiss)="isOpen.set(false)">
+  <ng-template>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ui-lib-list-item [listCustomClass]="'submenu-desktop-list'" [items]="currentSubMenuItems()"
+                          (clickedItem)="onMenuOpenItem($event)" id="hover-trigger">
+
+        </ui-lib-list-item>
+      </ion-col>
+      <ion-col size="auto">
+
+        <ion-popover trigger="hover-trigger" triggerAction="hover">
+          <ng-template>
+            <ui-lib-list-item [listCustomClass]="'submenu-active-desktop-list'" [items]="activeSubmenuItems()">
+            </ui-lib-list-item>
+          </ng-template>
+        </ion-popover>
+      </ion-col>
+    </ion-row>
+
+  </ng-template>
+</ion-popover>

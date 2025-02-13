@@ -1,0 +1,23 @@
+ion-searchbar.searchbar {
+  &__item {
+    --box-shadow: none;
+    padding: 0;
+
+    div {
+      & > input[type=search] {
+        border: var(--space-1px) solid var(--input-default-border-color);
+        border-radius: var(--space-0-25);
+        height: var(--space-3);
+
+        &:focus {
+          background: var(--blue-color-100);
+          border: var(--space-0-125) solid var(--blue-color-200);
+        }
+      }
+
+      & > ion-icon.searchbar-search-icon {
+        top: calc(var(--space-1) - var(--space-0-125));
+      }
+    }
+  }
+}

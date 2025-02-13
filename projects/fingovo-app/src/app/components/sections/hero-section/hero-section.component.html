@@ -1,0 +1,48 @@
+<div class="hero-section__container container-responsive-spaced">
+  <div class="hero-section__text-wrapper">
+    <h1 class="hero-section__title">
+      {{ sectionTextDetails().title }}
+    </h1>
+    <p class="hero-section__subtitle">
+      {{ sectionTextDetails().subtitle }}
+    </p>
+  </div>
+  <div class="hero-section__segments-wrapper">
+    <ion-segment [scrollable]="isScrollable()">
+      @for (segment of segmentListDetails(); track segment.id) {
+        <ion-segment-button class="segment-button" [value]="segment.id" [contentId]="segment.id">
+          <ion-label>{{ segment.title }}</ion-label>
+        </ion-segment-button>
+      }
+    </ion-segment>
+
+    <ion-segment-view>
+      @for (segment of segmentListDetails(); track segment.id) {
+        <ion-segment-content [id]="segment.id">
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="12" size-lg="6">
+                <div class="hero-section__segment-details">
+                  <p class="hero-section__segment-description">
+                    {{ segment.description }}
+                  </p>
+                  <ui-lib-button
+                    [redirectTo]="segment.redirectTo"
+                    [labelText]="segment.buttonText"
+                    [customClass]="'hero-section__segment-btn'"></ui-lib-button>
+                </div>
+              </ion-col>
+              <ion-col size="12" size-lg="6">
+                <ui-lib-image [src]="segment.imageDetails?.src"
+                              [alt]="segment.imageDetails?.alt"
+                              [class]="'hero-section__segment-image'"
+                >
+                </ui-lib-image>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-segment-content>
+      }
+    </ion-segment-view>
+  </div>
+</div>

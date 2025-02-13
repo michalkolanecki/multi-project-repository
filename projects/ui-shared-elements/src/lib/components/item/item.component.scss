@@ -1,0 +1,12 @@
+:host {
+  ion-item.item-default-styles::part(native) {
+    min-height: 0;
+    cursor: pointer;
+  }
+
+  ion-label {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+}

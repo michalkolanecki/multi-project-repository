@@ -1,0 +1,70 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-row class="header__container ion-justify-content-between ion-align-items-center">
+      <ion-col size="auto" class="header__sidebar-menu">
+        <div id="main-content">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </div>
+      </ion-col>
+      <ion-col size="auto">
+        <ui-lib-image [routerLink]="'/'"
+                      [src]="'assets/images/fingovo-logo.svg'"
+                      [alt]="'Fingovo logo'"
+                      [class]="'header__logo'"
+        >
+        </ui-lib-image>
+      </ion-col>
+
+      <ion-col size="auto" class="header__desktop-menu">
+        <app-desktop-menu></app-desktop-menu>
+      </ion-col>
+
+      <ion-col size="auto">
+        <ui-lib-icon class="ion-justify-content-end"
+                     id="open-modal"
+                     [name]="GLOBAL_ICONS['navigationSearchIcon'].name"
+                     [ariaLabel]="GLOBAL_ICONS['navigationSearchIcon'].ariaLabel"
+                     [ariaHidden]="GLOBAL_ICONS['navigationSearchIcon'].ariaHidden"
+                     [customClass]="GLOBAL_ICONS['navigationSearchIcon'].customClass"
+        ></ui-lib-icon>
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-modal #modal
+           class="searchbar__modal"
+           trigger="open-modal"
+           (didPresent)="onDidPresent()"
+>
+  <ng-template>
+    <ui-lib-icon class="ion-justify-content-end"
+                 [name]="GLOBAL_ICONS['searchbarCloseIcon'].name"
+                 [ariaLabel]="GLOBAL_ICONS['searchbarCloseIcon'].ariaLabel"
+                 [ariaHidden]="GLOBAL_ICONS['searchbarCloseIcon'].ariaHidden"
+                 [customClass]="GLOBAL_ICONS['searchbarCloseIcon'].customClass"
+                 (click)="modal.dismiss()"
+    ></ui-lib-icon>
+    <div class="searchbar__wrapper">
+      <ion-searchbar #searchbar
+                     class="searchbar__item"
+                     placeholder="Wyszukaj"
+                     [debounce]="500"
+                     (keydown.enter)="navigateToResult(); modal.dismiss()"
+      >
+      </ion-searchbar>
+      <ui-lib-button
+        class="ion-hide-md-down"
+        (click)="navigateToResult(); modal.dismiss()"
+        [labelText]="'Wyszukaj'"
+        [customClass]="'searchbar__btn'"></ui-lib-button>
+    </div>
+  </ng-template>
+</ion-modal>
+
+@if (sidebarMenuContentId()) {
+  <app-sidebar-menu [menuContentId]="sidebarMenuContentId()"></app-sidebar-menu>
+}

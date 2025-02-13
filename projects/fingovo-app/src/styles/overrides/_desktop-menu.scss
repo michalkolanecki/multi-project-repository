@@ -1,0 +1,39 @@
+@use "projects/global-styles/theme.scss" as globals;
+
+ion-popover.popover-desktop-wrapper {
+  margin-top: var(--header-desktop-height);
+
+  @include globals.responsive-view(
+      'mobile',
+      'tablet',
+      'laptop',
+  ) {
+    display: none;
+  }
+}
+
+ion-popover.popover-desktop-wrapper::part(content) {
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  width: 100%;
+  padding: var(--space-0-5) 0;
+
+  @include globals.responsive-view(
+      'desktop',
+  ) {
+    padding-left: calc((100vw - var(--breakpoint-desktop)) / 2 + var(--space-3));
+  }
+
+  @include globals.responsive-view(
+      'large-desktop',
+  ) {
+    padding-left: calc((100vw - var(--breakpoint-large-desktop)) / 2 + var(--space-3));
+  }
+
+  @include globals.responsive-view(
+      'extra-large-desktop'
+  ) {
+    padding-left: calc((100vw - var(--breakpoint-extra-large-desktop)) / 2 + var(--space-3));
+  }
+}

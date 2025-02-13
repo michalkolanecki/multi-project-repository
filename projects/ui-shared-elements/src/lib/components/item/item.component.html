@@ -1,0 +1,24 @@
+<ion-item
+  [lines]="itemLine()"
+  [className]="item()?.customClass"
+  [button]="item()?.isButton"
+  [detail]="item()?.hasArrow"
+  [detailIcon]="arrowIconType()"
+  [routerLink]="item()?.redirectTo"
+  [routerLinkActive]="item()?.customActiveLinkClass ?? 'default-active-link'"
+  ariaCurrentWhenActive="page"
+  [routerLinkActiveOptions]="{ exact: true }"
+  [ngClass]="{'item-default-styles': true}"
+>
+
+  @if (item()?.hasIcon && item()?.iconDetails) {
+    <ui-lib-icon [name]="item()?.iconDetails?.name"
+                 [src]="item()?.iconDetails?.src"
+                 [ariaLabel]="item()?.iconDetails?.ariaLabel"
+                 [ariaHidden]="item()?.iconDetails?.ariaHidden"
+                 [customClass]="item()?.iconDetails?.customClass"></ui-lib-icon>
+  }
+
+  <ion-label> {{ item()?.labelText }}</ion-label>
+</ion-item>
+

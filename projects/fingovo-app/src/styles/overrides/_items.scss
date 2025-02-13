@@ -1,0 +1,91 @@
+@use "projects/global-styles/theme.scss" as globals;
+
+/* DESKTOP NAVIGATION ITEMS */
+
+ion-item {
+  &.first-level-desktop-item::part(native) {
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-text-color);
+    text-transform: capitalize;
+    margin-left: var(--space-2);
+    padding: 0;
+    --inner-padding-end: 0;
+
+    &:hover {
+      border-bottom: var(--space-1px) solid var(--black-color);
+      transition: border-bottom 1s ease-out, border-bottom-color 600ms ease-out;
+    }
+
+    @include globals.responsive-view(
+        'desktop'
+    ) {
+      font-size: var(--font-size-xs);
+    }
+
+    @include globals.responsive-view(
+        'large-desktop',
+        'extra-large-desktop'
+    ) {
+      font-size: var(--font-size-md);
+    }
+  }
+
+  &.first-level-desktop-item.first-level-desktop-active-link::part(native) {
+    border-bottom: var(--space-1px) solid var(--green-color-500);
+  }
+
+  &.second-level-desktop-item::part(native) {
+    display: flex;
+    width: max-content;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-text-color);
+    text-transform: capitalize;
+    font-size: var(--font-size-md);
+    padding: var(--space-0-5) var(--space-1);
+  }
+
+  &.third-level-desktop-item::part(native) {
+    font-size: var(--font-size-sm);
+
+  }
+}
+
+/* SIDEBAR NAVIGATION ITEMS */
+
+ion-item {
+  &.base-sidebar-item::part(native) {
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-text-color);
+    text-transform: capitalize;
+    font-size: var(--font-size-lg);
+    --inner-padding-top: var(--space-1);
+    --inner-padding-bottom: var(--space-1);
+  }
+
+  &.second-level-sidebar-item::part(native) {
+    margin: var(--space-0-5) 0 var(--space-1);
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: var(--space-1);
+      content: "";
+      width: var(--space-3-5);
+      height: var(--space-0-25);
+      background-color: var(--green-color-500);
+      border-radius: var(--space-0-125);
+      display: block;
+    }
+  }
+
+  &.third-level-sidebar-item::part(native) {
+    font-size: var(--font-size-md);
+    --inner-padding-top: var(--space-1);
+    --inner-padding-bottom: var(--space-1);
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--green-color-500);
+    }
+  }
+}
