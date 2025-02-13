@@ -4,7 +4,7 @@ export function itemsFromDto<T>(items: ItemDTO[]): T[] {
     return items.map((item) => {
         return {
             ...item,
-            iconDetails: item.hasIcon ? item.iconDetails : null,
+            iconDetails: item.hasIcon && item.iconDetails ? item.iconDetails : null,
             children: item.children ? itemsFromDto(item.children) : [],
         };
     }) as T[];

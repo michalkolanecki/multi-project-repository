@@ -47,6 +47,7 @@
 
   &__logo {
     display: flex;
+    cursor: pointer;
 
     @include globals.responsive-view(
         'mobile',

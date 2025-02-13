@@ -1,5 +1,3 @@
-import { IconModel } from "../../icon/models/icon.model";
-
 interface DefaultItemModel {
     labelText?: string;
     customClass?: string;
@@ -12,7 +10,13 @@ interface DefaultItemModel {
     id?: string;
     hasIcon?: boolean;
     isRoot?: boolean;
-    iconDetails?: IconModel;
+    iconDetails?: {
+        src: string;
+        name: string;
+        ariaLabel: string;
+        ariaHidden: boolean;
+        customClass: string;
+    };
 }
 
 interface MenuItemModel extends DefaultItemModel {

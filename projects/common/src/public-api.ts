@@ -1,6 +1,9 @@
 /*
  * Public API Surface of common
  */
+// CONSTS
+export * from "./lib/consts/device-breakpoints";
+
 // ENUMS
 export * from "./lib/enums/navigation-config-type.enum";
 export * from "./lib/enums/navigation-config-level.enum";

@@ -17,7 +17,6 @@ export * from "./lib/shared";
 
 // MODELS
 export * from "./lib/components/item/models/item.model";
-export * from "./lib/components/icon/models/icon.model";
 export * from "./lib/components/button/models/button-fill-type.model";
 export * from "./lib/components/button/models/button-size.model";
 export * from "./lib/components/button/models/button-expand-type.model";

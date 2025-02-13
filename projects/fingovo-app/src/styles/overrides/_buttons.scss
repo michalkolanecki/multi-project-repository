@@ -1,8 +1,23 @@
-ion-button.searchbar {
-  &__btn {
-    height: var(--space-3);
-    --background: var(--green-color-dark);
-    --background-hover: var(--green-color-medium);
-    --border-color: var(--black-color);
+ion-button {
+  &.searchbar {
+    &__btn {
+      height: var(--space-3);
+      --background: var(--green-color-500);
+      --background-hover: var(--green-color-200);
+      --border-color: var(--black-color);
+    }
+  }
+
+  &.hero-section {
+    &__segment-btn {
+      &::part(native) {
+        padding: var(--space-1);
+        --background: var(--green-color-500);
+        --background-hover: var(--green-color-200);
+        letter-spacing: var(--space-0-125);
+        box-shadow: none;
+        font-weight: var(--font-weight-semibold);
+      }
+    }
   }
 }

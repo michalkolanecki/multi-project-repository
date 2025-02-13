@@ -1,28 +1,34 @@
-import { IconModel } from "ui-shared-elements";
+interface IconModel {
+    customClass: string;
+    name: string;
+    ariaLabel: string;
+    ariaHidden: boolean;
+    src?: string;
+}
 
 export const CUSTOM_ICONS: { [key: string]: IconModel } = {
     navigationSearchIcon: {
-        iconCustomClass: "navigation__search-icon",
-        iconVariant: "search",
-        iconAriaLabel: "Wyszukiwanie",
-        iconAriaHidden: false,
+        customClass: "navigation__search-icon",
+        name: "search",
+        ariaLabel: "Wyszukiwanie",
+        ariaHidden: false,
     },
     searchbarCloseIcon: {
-        iconCustomClass: "searchbar__close-icon",
-        iconVariant: "close",
-        iconAriaLabel: "Zamknij panel wyszukiwania",
-        iconAriaHidden: false,
+        customClass: "searchbar__close-icon",
+        name: "close",
+        ariaLabel: "Zamknij panel wyszukiwania",
+        ariaHidden: false,
     },
     sidebarCloseIcon: {
-        iconCustomClass: "sidebar__close-icon",
-        iconVariant: "close",
-        iconAriaLabel: "Zamknij boczne menu",
-        iconAriaHidden: false,
+        customClass: "sidebar__close-icon",
+        name: "close",
+        ariaLabel: "Zamknij boczne menu",
+        ariaHidden: false,
     },
     sidebarBackIcon: {
-        iconCustomClass: "sidebar__back-icon",
-        iconVariant: "chevron-back-outline",
-        iconAriaLabel: "Cofnij do poprzedniego menu",
-        iconAriaHidden: false,
+        customClass: "sidebar__back-icon",
+        name: "chevron-back-outline",
+        ariaLabel: "Cofnij do poprzedniego menu",
+        ariaHidden: false,
     },
 };

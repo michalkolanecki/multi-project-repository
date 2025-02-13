@@ -10,8 +10,8 @@ ion-searchbar.searchbar {
         height: var(--space-3);
 
         &:focus {
-          background: var(--blue-color-light);
-          border: var(--space-0-125) solid var(--blue-color-medium);
+          background: var(--blue-color-100);
+          border: var(--space-0-125) solid var(--blue-color-200);
         }
       }
 

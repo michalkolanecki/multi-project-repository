@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-row class="header__container ion-justify-content-between ion-align-items-center">
       <ion-col size="auto" class="header__sidebar-menu">
@@ -24,7 +24,10 @@
       <ion-col size="auto">
         <ui-lib-icon class="ion-justify-content-end"
                      id="open-modal"
-                     [iconDetails]="GLOBAL_ICONS['navigationSearchIcon']"
+                     [name]="GLOBAL_ICONS['navigationSearchIcon'].name"
+                     [ariaLabel]="GLOBAL_ICONS['navigationSearchIcon'].ariaLabel"
+                     [ariaHidden]="GLOBAL_ICONS['navigationSearchIcon'].ariaHidden"
+                     [customClass]="GLOBAL_ICONS['navigationSearchIcon'].customClass"
         ></ui-lib-icon>
       </ion-col>
 
@@ -39,7 +42,10 @@
 >
   <ng-template>
     <ui-lib-icon class="ion-justify-content-end"
-                 [iconDetails]="GLOBAL_ICONS['searchbarCloseIcon']"
+                 [name]="GLOBAL_ICONS['searchbarCloseIcon'].name"
+                 [ariaLabel]="GLOBAL_ICONS['searchbarCloseIcon'].ariaLabel"
+                 [ariaHidden]="GLOBAL_ICONS['searchbarCloseIcon'].ariaHidden"
+                 [customClass]="GLOBAL_ICONS['searchbarCloseIcon'].customClass"
                  (click)="modal.dismiss()"
     ></ui-lib-icon>
     <div class="searchbar__wrapper">
@@ -53,7 +59,7 @@
       <ui-lib-button
         class="ion-hide-md-down"
         (click)="navigateToResult(); modal.dismiss()"
-        [btnText]="'Wyszukaj'"
+        [labelText]="'Wyszukaj'"
         [customClass]="'searchbar__btn'"></ui-lib-button>
     </div>
   </ng-template>

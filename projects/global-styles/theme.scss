@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "./functions/helpers.scss" as helpers;
 
-// THEMS
+// THEMES
 @use "theming/devices-breakpoints" as devices-breakpoints;
 @use "./theming/typography.scss" as typography;
 @use "./theming/utils.scss" as utils;

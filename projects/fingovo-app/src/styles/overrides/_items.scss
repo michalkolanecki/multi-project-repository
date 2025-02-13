@@ -31,7 +31,7 @@ ion-item {
   }
 
   &.first-level-desktop-item.first-level-desktop-active-link::part(native) {
-    border-bottom: var(--space-1px) solid var(--green-color-dark);
+    border-bottom: var(--space-1px) solid var(--green-color-500);
   }
 
   &.second-level-desktop-item::part(native) {
@@ -72,7 +72,7 @@ ion-item {
       content: "";
       width: var(--space-3-5);
       height: var(--space-0-25);
-      background-color: var(--green-color-dark);
+      background-color: var(--green-color-500);
       border-radius: var(--space-0-125);
       display: block;
     }
@@ -85,7 +85,7 @@ ion-item {
 
     &:hover {
       text-decoration: underline;
-      color: var(--green-color-dark);
+      color: var(--green-color-500);
     }
   }
 }

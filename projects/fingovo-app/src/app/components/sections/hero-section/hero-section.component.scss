@@ -1,0 +1,120 @@
+@use "projects/global-styles/theme.scss" as globals;
+
+:host {
+  display: block;
+  background-color: var(--section-background-color);
+}
+
+.hero-section {
+  &__text-wrapper {
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  &__title, &__subtitle {
+    margin: 0;
+  }
+
+  &__title {
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--space-1px);
+  }
+
+  &__segments-wrapper {
+    border-radius: var(--space-0-5);
+    box-shadow: 0 var(--space-0-25) 0 0 var(--green-color-400), 0 var(--space-0-5) 0 0 var(--green-color-2Z00);
+
+    ion-segment {
+      border-radius: var(--space-0-5) var(--space-0-5) 0 0;
+    }
+
+    ion-segment-button {
+      --indicator-color: var(--background-color);
+      --color: var(--green-color-600);
+      --color-checked: var(--green-color-600);
+      --background-checked: var(--background-color);
+      --background: var(--green-color-200);
+      border-radius: var(--space-0-5) var(--space-0-5) 0 0;
+      font-weight: var(--font-weight-bold);
+      --margin-start: var(--space-1px);
+      --margin-end: var(--space-1px);
+      box-shadow: 0 0 3px 0 rgba(1, 85, 40, .3);
+    }
+
+    ion-segment-content {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--background-color);
+      border-radius: 0 0 var(--space-0-5) var(--space-0-5);
+    }
+  }
+
+  &__segment-details, &__segment-image {
+    display: flex;
+  }
+
+  &__segment-details {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__segment-description {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--space-1px);
+    color: var(--green-color-600);
+  }
+}
+
+
+/* MEDIA QUERIES */
+
+.hero-section {
+  @include globals.responsive-view(
+      'mobile',
+      'tablet',
+      'laptop',
+  ) {
+    &__text-wrapper {
+      padding: var(--space-2-5) var(--space-1);
+    }
+
+    &__title {
+      font-size: var(--font-size-xxl);
+    }
+
+    &__segment-details {
+      gap: var(--space-1);
+      padding: var(--space-1-5) var(--space-0-5);
+    }
+
+    &__segment-description {
+      font-size: var(--font-size-xl);
+    }
+  }
+
+  @include globals.responsive-view(
+      'desktop',
+      'large-desktop',
+      'extra-large-desktop'
+  ) {
+    &__text-wrapper {
+      padding: var(--space-2) 0;
+    }
+
+    &__title {
+      font-size: var(--font-size-xxxxl);
+    }
+
+    &__segment-details {
+      gap: var(--space-2-5);
+      padding: var(--space-4) var(--space-3);
+    }
+
+    &__segment-description {
+      font-size: var(--font-size-xxl);
+    }
+  }
+}

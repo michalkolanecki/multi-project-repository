@@ -7,6 +7,7 @@ $font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
 $font-size-xxl: 2rem;
 $font-size-xxxl: 3rem;
+$font-size-xxxxl: 3.5rem;
 
 $base-font-size: $font-size-md;
 
@@ -38,6 +39,7 @@ $font-weight-black: 900;
     --font-size-xl: #{$font-size-xl};
     --font-size-xxl: #{$font-size-xxl};
     --font-size-xxxl: #{$font-size-xxxl};
+    --font-size-xxxxl: #{$font-size-xxxxl};
 
     --heading-font-size-h1: #{$heading-font-size-h1};
     --heading-font-size-h2: #{$heading-font-size-h2};

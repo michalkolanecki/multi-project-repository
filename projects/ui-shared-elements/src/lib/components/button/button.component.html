@@ -1,11 +1,11 @@
 <ion-button [disabled]="isDisabled()"
-            [fill]="btnFillType()"
-            [size]="btnSize()"
+            [fill]="fillType()"
+            [size]="size()"
             [routerLink]="redirectTo()"
             [expand]="expandType()"
             [classList]="customClass()"
->{{ btnText() }}
-  @if (hasBtnIcon()) {
+>{{ labelText() }}
+  @if (hasIcon()) {
     <ng-content></ng-content>
   }
 </ion-button>

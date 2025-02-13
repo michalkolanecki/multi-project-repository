@@ -11,25 +11,38 @@ $info-color: #17a2b8;
 // Background Color
 $background-color: #ffffff;
 $footer-background: #f6e1a1;
+$section-background-color: rgba(20, 82, 32, 0.85);
 
 // Text Palette Color
 $primary-text-color: #1b1b1b;
 
 // Blue Palette Color
-$blue-color-light: #d8f1ff;
-$blue-color-medium: #0056cc;
-$blue-color-dark: #002c77;
+$blue-color-100: #d8f1ff;
+$blue-color-200: #0056cc;
+$blue-color-300: #002c77;
 
 // Green Palette Color
-$green-color-light: #e9f5ee;
-$green-color-medium: #c8e6c9;
-$green-color-dark: #225926;
-$green-color-darker: #145220;
+$green-color-100: #d8e6de;
+$green-color-200: #c8e6c9;
+$green-color-300: #7bdda9;
+$green-color-400: #00853e;
+$green-color-500: #007034;
+$green-color-600: #015528;
 
 // Yellow Palette Color
-$yellow-color-light: #f6e1a1;
-$yellow-color-medium: #fbc02d;
-$yellow-color-dark: #f0ad05;
+
+$yellow-color-100: #f1ead8;
+$yellow-color-200: #ffe7a7;
+$yellow-color-300: #ffd257;
+$yellow-color-400: #f5b403;
+$yellow-color-500: #bc8900;
+
+// Grey Palette Color
+$grey-color-100: #f5f5f5;
+$grey-color-200: #cccccc;
+$grey-color-300: #a3a3a3;
+$grey-color-400: #757575;
+$grey-color-500: #545454;
 
 // UTILS
 $input-default-border-color: #929292;
@@ -51,25 +64,37 @@ $input-default-border-color: #929292;
     // Background Color
     --background-color: #{$background-color};
     --footer-color: #{$footer-background};
+    --section-background-color: #{$section-background-color};
 
     // Text Color
     --primary-text-color: #{$primary-text-color};
 
     // Blue Palette Color
-    --blue-color-light: #{$blue-color-light};
-    --blue-color-medium: #{$blue-color-medium};
-    --blue-color-dark: #{$blue-color-dark};
+    --blue-color-100: #{$blue-color-100};
+    --blue-color-200: #{$blue-color-200};
+    --blue-color-300: #{$blue-color-300};
 
     // Green Palette Color
-    --green-color-light: #{$green-color-light};
-    --green-color-medium: #{$green-color-medium};
-    --green-color-dark: #{$green-color-dark};
-    --green-color-darker: #{$green-color-darker};
+    --green-color-100: #{$green-color-100};
+    --green-color-200: #{$green-color-200};
+    --green-color-300: #{$green-color-300};
+    --green-color-400: #{$green-color-400};
+    --green-color-500: #{$green-color-500};
+    --green-color-600: #{$green-color-600};
 
     // Yellow Palette Color
-    --yellow-color-light: #{$yellow-color-light};
-    --yellow-color-medium: #{$yellow-color-medium};
-    --yellow-color-dark: #{$yellow-color-dark};
+    --yellow-color-100: #{$yellow-color-100};
+    --yellow-color-200: #{$yellow-color-200};
+    --yellow-color-300: #{$yellow-color-300};
+    --yellow-color-400: #{$yellow-color-400};
+    --yellow-color-500: #{$yellow-color-500};
+
+    // Yellow Palette Color
+    --grey-color-100: #{$grey-color-100};
+    --grey-color-200: #{$grey-color-200};
+    --grey-color-300: #{$grey-color-300};
+    --grey-color-400: #{$grey-color-400};
+    --grey-color-500: #{$grey-color-500};
 
     // UTILS
     --input-default-border-color: #{$input-default-border-color};

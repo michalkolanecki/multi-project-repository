@@ -10,23 +10,27 @@ import { ButtonExpandType } from "./models/button-expand-type.model";
  * You are able to customize the button by passing additional parameters to inputs
  * e.g. fill, btnText, size.
  *
- * Example usage:
- * <ui-lib-button [size]="small"
- *                [disabled]="true">
- * </ui-lib-icon>
- *
- * If a button should have an icon, then a property hasBtnIcon have to value "true"
- * and there is the content projector "<ng-content>" and you will be able to
- * add an icon there.
+ * By default, the button always has a fill type.
+ * You can change fill property by using one of the ButtonFillType.
  *
  * Example usage:
  * <ui-lib-button [size]="small"
- *                [disabled]="true">
+ *                [isDisabled]="true"
+ *                [redirectTo]="example/path">
+ * </ui-lib-button>
  *
+ * If a button should have an icon, between open and close tags of the button you pass an icon.
+ * To display a particular icon the property hasIcon have to value "true".
+ * It will be displayed inside the content projector "<ng-content>".
+ *
+ * Example usage:
+ * <ui-lib-button [size]="small"
+ *                [isDisabled]="true"
+ *                [hasIcon]="true">
  *               <ui-lib-icon [src]="src/example.svg"
  *                            [customClass]="test-icon-class">
  *              </ui-lib-icon>
- * </ui-lib-icon>
+ * </ui-lib-button>
  *
  * https://ionicframework.com/docs/api/button
  */
@@ -39,12 +43,12 @@ import { ButtonExpandType } from "./models/button-expand-type.model";
     imports: [IonButton, RouterLink],
 })
 export class ButtonComponent {
-    expandType = input<ButtonExpandType>();
     isDisabled = input<boolean>(false);
-    btnFillType = input<ButtonFillType>();
-    btnSize = input<ButtonSize>();
-    btnText = input<string>("");
-    hasBtnIcon = input<boolean>(false);
+    labelText = input<string>();
+    hasIcon = input<boolean>(false);
     redirectTo = input<string>();
     customClass = input<string>();
+    expandType = input<ButtonExpandType>();
+    fillType = input<ButtonFillType>();
+    size = input<ButtonSize>();
 }

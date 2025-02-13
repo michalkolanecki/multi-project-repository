@@ -3,7 +3,7 @@
   [className]="item()?.customClass"
   [button]="item()?.isButton"
   [detail]="item()?.hasArrow"
-  [detailIcon]="arrowIconVariant()"
+  [detailIcon]="arrowIconType()"
   [routerLink]="item()?.redirectTo"
   [routerLinkActive]="item()?.customActiveLinkClass ?? 'default-active-link'"
   ariaCurrentWhenActive="page"
@@ -12,7 +12,11 @@
 >
 
   @if (item()?.hasIcon && item()?.iconDetails) {
-    <ui-lib-icon [iconDetails]="item()?.iconDetails"></ui-lib-icon>
+    <ui-lib-icon [name]="item()?.iconDetails?.name"
+                 [src]="item()?.iconDetails?.src"
+                 [ariaLabel]="item()?.iconDetails?.ariaLabel"
+                 [ariaHidden]="item()?.iconDetails?.ariaHidden"
+                 [customClass]="item()?.iconDetails?.customClass"></ui-lib-icon>
   }
 
   <ion-label> {{ item()?.labelText }}</ion-label>

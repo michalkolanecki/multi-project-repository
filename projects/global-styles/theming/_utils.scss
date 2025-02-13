@@ -36,6 +36,9 @@ $logo-desktop-height: 3.375rem;
 // SIDEBAR MENU
 $sidebar-menu-width: 25rem;
 
+// CONTAINER WIDTH
+$max-width-container: 1260px;
+
 
 @mixin addSpacingVarsToRoot() {
   :root {
@@ -72,5 +75,7 @@ $sidebar-menu-width: 25rem;
     --logo-desktop-height: #{$logo-desktop-height};
 
     --sidebar-menu-width: #{$sidebar-menu-width};
+
+    --max-width-container: #{$max-width-container};
   }
 }

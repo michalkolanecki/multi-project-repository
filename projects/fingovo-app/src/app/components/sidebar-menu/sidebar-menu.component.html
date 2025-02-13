@@ -3,13 +3,19 @@
   <ion-header class="sidebar-menu__header">
     <ion-toolbar class="sidebar-menu__toolbar">
       <ion-menu-toggle slot="start">
-        <ui-lib-icon [iconDetails]="GLOBAL_ICONS['sidebarCloseIcon']"
+        <ui-lib-icon [name]="GLOBAL_ICONS['sidebarCloseIcon'].name"
+                     [ariaLabel]="GLOBAL_ICONS['sidebarCloseIcon'].ariaLabel"
+                     [ariaHidden]="GLOBAL_ICONS['sidebarCloseIcon'].ariaHidden"
+                     [customClass]="GLOBAL_ICONS['sidebarCloseIcon'].customClass"
         ></ui-lib-icon>
       </ion-menu-toggle>
 
       @if (currentItem().children) {
         <div slot="end" class="sidebar-menu__title-wrapper" (click)="onBackClick()">
-          <ui-lib-icon [iconDetails]="GLOBAL_ICONS['sidebarBackIcon']"
+          <ui-lib-icon [name]="GLOBAL_ICONS['sidebarBackIcon'].name"
+                       [ariaLabel]="GLOBAL_ICONS['sidebarBackIcon'].ariaLabel"
+                       [ariaHidden]="GLOBAL_ICONS['sidebarBackIcon'].ariaHidden"
+                       [customClass]="GLOBAL_ICONS['sidebarBackIcon'].customClass"
           ></ui-lib-icon>
           <ion-title class="sidebar-menu__title"> {{ currentItem().labelText }}</ion-title>
         </div>
