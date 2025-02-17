@@ -26,9 +26,9 @@
 @use "@ionic/angular/css/flex-utils.css";
 
 /* You can add custom global styles to this file, and also import other style files */
-@use "projects/global-styles/theme.scss" as globals;
 @use "./styles/colors.scss" as colors;
 @use "./styles/overrides";
+@use "./styles/globals" as globals;
 
 @include colors.injectCSSColorVarsToRoot();
 

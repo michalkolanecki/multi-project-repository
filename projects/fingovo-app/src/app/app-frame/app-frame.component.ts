@@ -5,10 +5,10 @@ import { RouterOutlet } from "@angular/router";
 import { NavigationComponent } from "../components/navigation/navigation.component";
 
 @Component({
-    selector: "app-fingovo-frame",
-    templateUrl: "./fingovo-frame.component.html",
-    styleUrls: ["./fingovo-frame.component.scss"],
+    selector: "app-frame",
+    templateUrl: "./app-frame.component.html",
+    styleUrls: ["./app-frame.component.scss"],
     standalone: true,
     imports: [IonContent, FooterComponent, RouterOutlet, NavigationComponent],
 })
-export class FingovoFrameComponent {}
+export class AppFrameComponent {}

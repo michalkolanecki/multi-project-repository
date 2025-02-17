@@ -1,4 +1,4 @@
-@use "projects/global-styles/theme.scss" as globals;
+@use "../../../../styles/globals";
 
 :host {
   display: block;
@@ -24,7 +24,7 @@
 
   &__segments-wrapper {
     border-radius: var(--space-0-5);
-    box-shadow: 0 var(--space-0-25) 0 0 var(--green-color-400), 0 var(--space-0-5) 0 0 var(--green-color-2Z00);
+    box-shadow: 0 var(--space-0-25) 0 0 var(--green-color-400), 0 var(--space-0-5) 0 0 var(--green-color-200);
 
     ion-segment {
       border-radius: var(--space-0-5) var(--space-0-5) 0 0;

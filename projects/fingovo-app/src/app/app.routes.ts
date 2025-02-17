@@ -4,7 +4,7 @@ export const routes: Routes = [
     {
         path: "",
         loadComponent: () =>
-            import("./fingovo-frame/fingovo-frame.component").then((c) => c.FingovoFrameComponent),
+            import("./app-frame/app-frame.component").then((c) => c.AppFrameComponent),
         loadChildren: () => import("./screens/screen.routes").then((m) => m.Screen_Routes),
     },
     {
